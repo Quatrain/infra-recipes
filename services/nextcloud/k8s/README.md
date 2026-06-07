@@ -1,4 +1,4 @@
-# Nextcloud Kubernetes Stack (BRAD2026)
+# Nextcloud Kubernetes Stack
 
 This Terraform recipe deploys a full Nextcloud instance on Kubernetes, optimized for Scaleway Block Storage (SBS) and Traefik Ingress.
 

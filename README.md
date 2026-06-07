@@ -1,6 +1,6 @@
-# BRAD2026 Infrastructure
+# Infrastructure Recipes
 
-This repository contains the Infrastructure as Code (IaC) recipes for the BRAD2026 project.
+This repository contains generic Infrastructure as Code (IaC) recipes for deploying various services.
 
 ## Repository Structure
 
@@ -19,7 +19,7 @@ infra/
 
 ## General Principles
 
-1. **Kubernetes First**: Main production workloads run on Scaleway Kapsule.
-2. **Persistence**: All data is stored on Scaleway Block Storage (`sbs-default`).
-3. **Security**: SSL is automated via Traefik and Let's Encrypt.
+1. **Kubernetes First**: Production workloads are designed for Kubernetes (e.g., Scaleway Kapsule).
+2. **Persistence**: Data persistence is handled via Cloud Block Storage (e.g., Scaleway SBS).
+3. **Security**: SSL is automated via Ingress Controllers (e.g., Traefik) and Let's Encrypt.
 4. **Maintenance**: Recipes use Terraform to ensure reproducibility and consistency.

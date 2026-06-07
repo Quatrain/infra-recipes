@@ -1,4 +1,4 @@
-# Odoo Kubernetes Stack (BRAD2026)
+# Odoo Kubernetes Stack
 
 Generic Odoo 16 module for Kubernetes.
 

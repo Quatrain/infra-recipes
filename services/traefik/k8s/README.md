@@ -1,4 +1,4 @@
-# Traefik Ingress Controller (BRAD2026)
+# Traefik Ingress Controller
 
 This Terraform recipe deploys and configures Traefik v3.5 as the primary Ingress Controller for the cluster.
 

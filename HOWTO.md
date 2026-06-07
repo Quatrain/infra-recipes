@@ -1,11 +1,11 @@
 # Global Infrastructure HOWTO
 
-Common operations for managing the BRAD2026 infrastructure.
+Common operations for managing infrastructure recipes.
 
 ## 🛠 Prerequisites
 
 - `terraform` CLI.
-- `kubectl` configured with the `brad-fr-k8s` context.
+- `kubectl` configured with your cluster context.
 - `scw` CLI for managing Scaleway resources if needed.
 
 ## 🚀 Standard Deployment Flow

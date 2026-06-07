@@ -10,7 +10,7 @@ variable "domain" {
 
 variable "mattermost_image" {
   type    = string
-  default = "mattermost/mattermost-team-edition:9.8"
+  default = "mattermost/mattermost-team-edition:10.11.0"
 }
 
 variable "db_password" {

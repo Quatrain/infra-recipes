@@ -37,3 +37,8 @@ variable "db_storage_size" {
   type    = string
   default = "5Gi"
 }
+
+variable "image_pull_secret" {
+  type    = string
+  default = null
+}

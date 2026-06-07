@@ -19,8 +19,15 @@ resource "kubernetes_deployment" "odoo" {
           app = "odoo"
         }
       }
-      spec {
+      spec:
+        dynamic "image_pull_secrets" {
+          for_each = var.image_pull_secret != null ? [1] : []
+          content {
+            name = var.image_pull_secret
+          }
+        }
         container {
+
           name  = "odoo"
           image = var.odoo_image
           env {

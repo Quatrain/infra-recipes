@@ -42,3 +42,15 @@ variable "image_pull_secret" {
   type    = string
   default = null
 }
+
+variable "db_name" {
+  type        = string
+  default     = "postgres"
+  description = "Default database name"
+}
+
+variable "addons_path" {
+  type        = string
+  default     = "/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons"
+  description = "Comma separated list of addons paths"
+}

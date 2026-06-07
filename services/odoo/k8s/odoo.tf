@@ -68,6 +68,11 @@ resource "kubernetes_deployment" "odoo" {
             name       = "odoo-addons"
             mount_path = "/mnt/extra-addons"
           }
+          volume_mount {
+            name       = "odoo-config"
+            mount_path = "/etc/odoo/odoo.conf"
+            sub_path   = "odoo.conf"
+          }
         }
         volume {
           name = "odoo-data"
@@ -79,6 +84,12 @@ resource "kubernetes_deployment" "odoo" {
           name = "odoo-addons"
           persistent_volume_claim {
             claim_name = kubernetes_persistent_volume_claim.odoo_addons.metadata[0].name
+          }
+        }
+        volume {
+          name = "odoo-config"
+          config_map {
+            name = kubernetes_config_map.odoo_config.metadata[0].name
           }
         }
       }

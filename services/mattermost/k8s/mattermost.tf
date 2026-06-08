@@ -47,6 +47,18 @@ resource "kubernetes_deployment" "mattermost" {
             name  = "MM_SERVICESETTINGS_SITEURL"
             value = "https://${var.domain}"
           }
+          env {
+            name  = "MM_EMAILSETTINGS_SENDPUSHNOTIFICATIONS"
+            value = "true"
+          }
+          env {
+            name  = "MM_EMAILSETTINGS_PUSHNOTIFICATIONSERVER"
+            value = "https://push-test.mattermost.com"
+          }
+          env {
+            name  = "MM_EMAILSETTINGS_PUSHNOTIFICATIONCONTENTS"
+            value = "generic"
+          }
           port {
             container_port = 8065
           }

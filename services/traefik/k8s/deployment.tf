@@ -45,7 +45,13 @@ resource "kubernetes_deployment" "traefik" {
           image = "docker.io/traefik:v3.5.3"
           args = [
             "--entryPoints.web.address=:8000/tcp",
+            "--entryPoints.web.transport.respondingTimeouts.readTimeout=300s",
+            "--entryPoints.web.transport.respondingTimeouts.writeTimeout=300s",
+            "--entryPoints.web.transport.respondingTimeouts.idleTimeout=300s",
             "--entryPoints.websecure.address=:8443/tcp",
+            "--entryPoints.websecure.transport.respondingTimeouts.readTimeout=300s",
+            "--entryPoints.websecure.transport.respondingTimeouts.writeTimeout=300s",
+            "--entryPoints.websecure.transport.respondingTimeouts.idleTimeout=300s",
             "--api.dashboard=true",
             "--providers.kubernetescrd",
             "--providers.kubernetesingress",

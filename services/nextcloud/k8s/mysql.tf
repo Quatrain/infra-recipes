@@ -55,8 +55,8 @@ resource "kubernetes_deployment" "nextcloud_db" {
           }
           resources {
             requests = {
-              cpu    = "100m"
-              memory = "256Mi"
+              cpu    = "500m"
+              memory = "1Gi"
             }
             limits = {
               cpu    = "500m"

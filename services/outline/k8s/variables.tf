@@ -70,5 +70,5 @@ variable "db_storage_size" {
 
 variable "minio_storage_size" {
   type    = string
-  default = "50Gi"
+  default = "10Gi"
 }

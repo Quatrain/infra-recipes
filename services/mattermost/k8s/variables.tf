@@ -25,7 +25,7 @@ variable "storage_class" {
 
 variable "data_storage_size" {
   type    = string
-  default = "50Gi"
+  default = "10Gi"
 }
 
 variable "db_storage_size" {

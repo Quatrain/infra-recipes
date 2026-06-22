@@ -73,6 +73,10 @@ resource "kubernetes_deployment" "nextcloud" {
             name  = "TRUSTED_PROXIES"
             value = "10.0.0.0/8"
           }
+          env {
+            name  = "PHP_MEMORY_LIMIT"
+            value = "1024M"
+          }
           port {
             container_port = 80
           }
